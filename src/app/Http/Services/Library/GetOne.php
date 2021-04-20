@@ -6,12 +6,6 @@ namespace App\Http\Services\Library;
 
 abstract class GetOne
 {
-    private $param;
-    public function __construct($param)
-    {
-        $this->param = $param;
-    }
-
 
     public function getOne($param)
     {

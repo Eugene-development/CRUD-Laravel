@@ -175,7 +175,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\NavigationServiceProvider::class,
-        App\Providers\PostServiceProvider::class,
         App\Providers\ProductServiceProvider::class,
         App\Providers\SeoServiceProvider::class,
         App\Providers\TextServiceProvider::class,
