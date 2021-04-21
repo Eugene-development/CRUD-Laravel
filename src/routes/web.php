@@ -42,6 +42,7 @@ Route::put('/update-rubric', [RubricController::class, 'update']);
 Route::delete('/delete-rubric/{id}', [RubricController::class, 'delete']);
 
 //Category
+Route::get('/get-all-category', [CategoryController::class, 'getAll']);
 Route::get('/get-all-category-seo', [CategoryController::class, 'getAllHm']);
 Route::get('/get-category-seo/{id}', [CategoryController::class, 'getWhHm']);
 Route::post('/add-category', [CategoryController::class, 'add']);
