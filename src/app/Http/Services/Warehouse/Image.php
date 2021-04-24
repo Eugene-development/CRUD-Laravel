@@ -10,6 +10,6 @@ trait Image
 
     function __construct()
     {
-        $this->model = 'App\Model\Image';
+        $this->model = 'App\Models\Image';
     }
 }

@@ -3,11 +3,10 @@
 
 namespace App\Http\Services\Factory\Catalog;
 
-
-use App\Http\Contracts\Catalog;
+use App\Http\Contracts\Catalog\Catalog;
 use App\Http\Services\Factory\Repository;
 
-class CatalogRepository extends Repository implements Catalog
+class CatalogCatalogRepository extends Repository implements Catalog
 {
     protected $path = 'Factory\Catalog';
 

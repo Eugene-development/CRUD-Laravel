@@ -10,6 +10,6 @@ trait Catalog
 
     function __construct()
     {
-        $this->model = 'App\Model\Product';
+        $this->model = 'App\Models\Product';
     }
 }

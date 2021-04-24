@@ -10,6 +10,6 @@ trait Head
 
     function __construct()
     {
-        $this->model = 'App\Model\Head';
+        $this->model = 'App\Models\Head';
     }
 }

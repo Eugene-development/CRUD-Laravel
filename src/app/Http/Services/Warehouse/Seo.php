@@ -10,6 +10,6 @@ trait Seo
 
     function __construct()
     {
-        $this->model = 'App\Model\Seo';
+        $this->model = 'App\Models\Seo';
     }
 }

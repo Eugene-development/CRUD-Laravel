@@ -10,6 +10,6 @@ trait Rubric
 
     function __construct()
     {
-        $this->model = 'App\Model\Rubric';
+        $this->model = 'App\Models\Rubric';
     }
 }

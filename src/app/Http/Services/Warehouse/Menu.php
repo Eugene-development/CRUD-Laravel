@@ -10,6 +10,6 @@ trait Menu
 
     function __construct()
     {
-        $this->model = 'App\Model\Menu';
+        $this->model = 'App\Models\Menu';
     }
 }

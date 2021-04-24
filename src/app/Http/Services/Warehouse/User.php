@@ -10,6 +10,6 @@ trait User
 
     function __construct()
     {
-        $this->model = 'App\Model\User';
+        $this->model = 'App\Models\User';
     }
 }

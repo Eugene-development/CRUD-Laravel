@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Contracts;
+namespace App\Http\Contracts\Catalog;
 
 
 interface Catalog

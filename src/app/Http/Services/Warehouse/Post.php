@@ -10,7 +10,7 @@ trait Post
 
     function __construct()
     {
-        $this->model = 'App\Model\Post';
+        $this->model = 'App\Models\Post';
     }
 
 }

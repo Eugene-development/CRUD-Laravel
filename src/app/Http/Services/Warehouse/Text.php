@@ -10,6 +10,6 @@ trait Text
 
     function __construct()
     {
-        $this->model = 'App\Model\Text';
+        $this->model = 'App\Models\Text';
     }
 }

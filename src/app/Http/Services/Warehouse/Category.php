@@ -10,6 +10,6 @@ trait Category
 
     function __construct()
     {
-        $this->model = 'App\Model\Category';
+        $this->model = 'App\Models\Category';
     }
 }
