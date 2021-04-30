@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\Resource;
+use Illuminate\Http\Request;
 
 trait Read
 {
@@ -15,6 +16,8 @@ trait Read
 
     public function getOne($param)
     {
+//        $token = $request->bearerToken();
+//        dd($token);
         $container = app();
         $response = $container->make($this->entity)->getOne($param);
         return new Resource($response);

@@ -10,6 +10,7 @@ class Product extends Model
 
     protected $table = 'prod_product';
 
+
     public function category()
     {
         return $this->belongsTo(Category::class);
