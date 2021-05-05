@@ -14,7 +14,8 @@ trait Update
         $param = $request->id;
         $data = [
             'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'slug' => Str::slug($request->name),
+            'price' => $request->price,
         ];
         $container = app();
         $container->make($this->entity)->update($param, $data);

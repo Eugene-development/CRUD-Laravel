@@ -31,6 +31,9 @@ abstract class GetOne
 
 
 
+        //Schema::connection('sqlite')->
+
+
 //        \Config::set('database.connections.mysql2.database', 'DB5');
 //        DB::purge('mysql2');
 
@@ -42,14 +45,34 @@ abstract class GetOne
 
 
 
-        Config::set("database.connections.mysql", [
-            "driver" => "mysql",
-            "host" => "orbita.clk36bqcisui.eu-central-1.rds.amazonaws.com",
-            "database" => $this->token,
-            "username" => "admin",
-            "password" => "db3PRO2021"
-        ]);
+//        Config::set("database.connections.mysql2", [
+//            'driver' => 'mysql',
+//            'url' => env('DATABASE_URL'),
+//            'host' => env('DB_HOST', '127.0.0.1'),
+//            'port' => env('DB_PORT', '3306'),
+//            'database' => "DB5",
+//            'username' => env('DB_USERNAME', 'forge'),
+//            'password' => env('DB_PASSWORD', ''),
+//            'unix_socket' => env('DB_SOCKET', ''),
+//            'charset' => 'utf8mb4',
+//            'collation' => 'utf8mb4_unicode_ci',
+//            'prefix' => '',
+//            'prefix_indexes' => true,
+//            'strict' => true,
+//            'engine' => null,
+//            'options' => extension_loaded('pdo_mysql') ? array_filter([
+//                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+//            ]) : [],
+//        ]);
 
+//        Config::set("database.connections.mysql", [
+//            "driver" => "mysql",
+//            "host" => env('DB_HOST', '127.0.0.1'),
+//            "database" => $this->token,
+//            "username" => env('DB_USERNAME', 'forge'),
+//            "password" => env('DB_PASSWORD', '')
+//        ]);
+//
 
 
         return $this->model::where('id', $param)->with(['category', 'image'])->get();

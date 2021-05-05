@@ -22,6 +22,7 @@ trait Catalog
     function __construct(Request $request)
     {
         $this->model = 'App\Models\Product';
-        $this->token = $request->bearerToken();
+        $this->token = 'DB5';
+//        $this->token = $request->bearerToken();
     }
 }
