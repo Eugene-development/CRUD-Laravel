@@ -4,15 +4,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\Resource;
-use Illuminate\Http\Request;
 
 trait Read
 {
-//    private $param;
-//    public function __construct($param)
-//    {
-//        $this->param = $param;
-//    }
 
     public function getOne($param)
     {

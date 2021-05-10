@@ -3,8 +3,6 @@
 
 namespace App\Http\Controllers\Catalog;
 
-
-use App\Http\Contracts\Catalog;
 use App\Http\Controllers\Controller;
 
 class ProductController extends Controller

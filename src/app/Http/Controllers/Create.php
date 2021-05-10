@@ -13,7 +13,11 @@ trait Create
     {
         $data = [
             'name' => $request->name,
-            'slug' => Str::slug($request->name)
+            'slug' => Str::slug($request->name),
+            'price' => $request->price,
+            'category_id' => $request->category,
+            'unit' => $request->unit,
+            'description' => $request->description
         ];
         $container = app();
         $response = $container->make($this->entity)->create($data);
