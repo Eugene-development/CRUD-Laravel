@@ -3,16 +3,30 @@
 
 namespace App\Http\Controllers\Catalog;
 
+use App\Http\Contracts\Catalog; //Не удалять!!!!!!!!!!
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class ProductController extends Controller
 {
 
     protected $entity;
+    protected $data;
 
-    function __construct()
+    function __construct(Request $request)
     {
         $this->entity = Catalog::class;
+
+        $this->data = [
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'price' => $request->price,
+            'category_id' => $request->category,
+            'unit' => $request->unit,
+            'description' => $request->description
+        ];
     }
 
 
