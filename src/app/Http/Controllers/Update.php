@@ -4,22 +4,14 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-
 trait Update
 {
-    public function update(Request $request)
+    //SuperMethod
+    public function update()
     {
-        $param = $request->id;
-        $data = [
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'price' => $request->price,
-        ];
         $container = app();
-        $container->make($this->entity)->update($param, $data);
-        return $data;
+        $container->make($this->entity)->update($this->param, $this->data);
+        return $this->data;
     }
 
 }

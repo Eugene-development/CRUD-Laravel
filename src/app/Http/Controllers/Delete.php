@@ -4,15 +4,13 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Http\Request;
-
 trait Delete
 {
-    public function delete(Request $request)
+    //SuperMethod
+    public function delete()
     {
-        $param = $request->id;
         $container = app();
-        $container->make($this->entity)->delete($param);
-        return $param;
+        $container->make($this->entity)->delete($this->param);
+        return $this->param;
     }
 }

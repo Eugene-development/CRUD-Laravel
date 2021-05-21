@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 class MenuController extends Controller
 {
     protected $entity;
+    protected $param;
     protected $data;
 
     function __construct(Request $request)
@@ -20,6 +21,8 @@ class MenuController extends Controller
 //        $token = $request->bearerToken();
 //                dd('123');
         $this->entity = Menu::class;
+
+        $this->param = $request->id;
 
         $this->data = [
             'name' => $request->name,

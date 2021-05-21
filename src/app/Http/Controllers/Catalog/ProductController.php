@@ -13,17 +13,20 @@ class ProductController extends Controller
 {
 
     protected $entity;
+    protected $param;
     protected $data;
 
     function __construct(Request $request)
     {
         $this->entity = Catalog::class;
 
+        $this->param = $request->id;
+
         $this->data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),
             'price' => $request->price,
-            'category_id' => $request->category,
+            'category_id' => $request->category_id,
             'unit' => $request->unit,
             'description' => $request->description
         ];
