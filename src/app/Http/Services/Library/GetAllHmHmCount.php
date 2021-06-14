@@ -8,8 +8,10 @@ abstract class GetAllHmHmCount
 {
     public function getAllHmHmCount()
     {
-        return $this->model::with([$this->withEntity . $this->subEntity => function($query) {
-            $query->withCount($this->countEntity);
-        }])->get();
+        return $this->model::where('project_id', $this->token)
+            ->with([$this->withEntity . $this->subEntity => function($query) {
+                $query->withCount($this->countEntity);
+            }])
+            ->get();
     }
 }

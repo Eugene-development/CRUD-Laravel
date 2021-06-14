@@ -8,9 +8,8 @@ abstract class GetAllHm
 {
     public function getAllHm()
     {
-//        dd($this->token);
-
-        return $this->model::with($this->withEntity)
+        return $this->model::where('project_id', $this->token)
+            ->with($this->withEntity)
             ->get();
     }
 }

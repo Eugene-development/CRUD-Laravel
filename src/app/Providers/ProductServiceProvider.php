@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Http\Contracts\Catalog;
+use App\Http\Contracts\Production\Catalog;
 use App\Http\Services\Factory\Catalog\CatalogRepository;
 use Illuminate\Support\ServiceProvider;
 

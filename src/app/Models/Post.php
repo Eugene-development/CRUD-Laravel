@@ -14,6 +14,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function text()
+    {
+        return $this->morphOne(Text::class, 'tagable');
+    }
+
     public function seo()
     {
         return $this->morphOne(Seo::class, 'tagable');

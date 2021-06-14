@@ -12,8 +12,8 @@ class Image extends Model
 
     protected $table = 'images';
 
-    public function product ()
+    public function tagable()
     {
-        return $this->belongsTo(Product::class);
+        return $this->morphTo();
     }
 }

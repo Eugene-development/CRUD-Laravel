@@ -8,7 +8,7 @@ class Product extends Model
 {
     protected $guarded = [];
 
-    protected $table = 'prod_product';
+    protected $table = 'product';
 
 
     public function category()
@@ -23,7 +23,12 @@ class Product extends Model
 
     public function image()
     {
-        return $this->hasMany(Image::class);
+        return $this->morphMany(Image::class, 'tagable');
+    }
+
+    public function text()
+    {
+        return $this->morphOne(Text::class, 'tagable');
     }
 
     public function seo()

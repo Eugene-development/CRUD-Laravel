@@ -12,6 +12,7 @@ final class RubricRepository extends Repository implements Rubric
     protected $path = 'Factory\Navigation\Rubric';
 
     protected $serviceAll;
+    protected $serviceAllHm;
     protected $serviceAllHmCount;
     protected $serviceWhHmCount;
     protected $serviceWhHmHmCount;
@@ -22,12 +23,14 @@ final class RubricRepository extends Repository implements Rubric
 
     public function __construct()
     {
-        $this->serviceAll        = app('App\Http\Services\\' . $this->path . '\ServiceAll');
-        $this->serviceAllHmCount = app('App\Http\Services\\' . $this->path . '\ServiceAllHmCount');
-        $this->serviceWhHmCount = app('App\Http\Services\\' . $this->path . '\ServiceWhHmCount');
+        $this->serviceAll         = app('App\Http\Services\\' . $this->path . '\ServiceAll');
+        $this->serviceAllHm       = app('App\Http\Services\\' . $this->path . '\ServiceAllHm');
+
+        $this->serviceAllHmCount  = app('App\Http\Services\\' . $this->path . '\ServiceAllHmCount');
+        $this->serviceWhHmCount   = app('App\Http\Services\\' . $this->path . '\ServiceWhHmCount');
         $this->serviceWhHmHmCount = app('App\Http\Services\\' . $this->path . '\ServiceWhHmHmCount');
-        $this->serviceCreate     = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
-        $this->serviceUpdate     = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
-        $this->serviceDelete     = app('App\Http\Services\\' . $this->path . '\ServiceDelete');
+        $this->serviceCreate      = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
+        $this->serviceUpdate      = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
+        $this->serviceDelete      = app('App\Http\Services\\' . $this->path . '\ServiceDelete');
     }
 }

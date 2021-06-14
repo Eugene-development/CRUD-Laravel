@@ -52,7 +52,6 @@ abstract class Repository
 
     public function getWhHmCount($param)
     {
-//        подчёркнуто
         return $this->serviceWhHmCount->getWhHmCount($param);
     }
 
@@ -67,7 +66,7 @@ abstract class Repository
     }
 
 
-//    Chenge
+//    Change
     public function create($data)
     {
         return $this->serviceCreate->create($data);

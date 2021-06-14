@@ -13,7 +13,12 @@ abstract class GetOne
 
     public function getOne($param)
     {
-//        return $this->model::where('id', $param)
+        return $this->model::where('project_id', $this->token)
+            ->where('id', $param)
+            ->with(['category', 'image'])//TODO убрать хардкор
+            ->get();
+
+        //        return $this->model::where('id', $param)
 //            ->first();
 
 //        return DB::connection('mysql')->select($this->model::where('id', $param)->with(['category', 'image'])->get());
@@ -75,6 +80,5 @@ abstract class GetOne
 //
 
 
-        return $this->model::where('id', $param)->with(['category', 'image'])->get();
     }
 }

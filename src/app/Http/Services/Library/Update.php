@@ -8,7 +8,8 @@ abstract class Update
 {
     public function update($param, $data)
     {
-        $this->model::find($param)
+        $this->model::where('project_id', $this->token)
+            ->find($param)
             ->update($data);
     }
 }

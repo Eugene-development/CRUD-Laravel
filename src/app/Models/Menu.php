@@ -9,7 +9,7 @@ class Menu extends Model
 
     protected $guarded = [];
 
-    protected $table = 'nvg_menu';
+    protected $table = 'menu';
 
     public function head()
     {
@@ -18,7 +18,7 @@ class Menu extends Model
 
     public function text()
     {
-        return$this->hasMany(Text::class);
+        return $this->morphOne(Text::class, 'tagable');
     }
 
     public function seo()

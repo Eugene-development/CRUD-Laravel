@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $guarded = [];
 
-    protected $table = 'nvg_category';
+    protected $table = 'category';
 
     public function product()
     {
@@ -27,7 +27,7 @@ class Category extends Model
 
     public function text()
     {
-        return $this->hasMany(Text::class);
+        return $this->morphOne(Text::class, 'tagable');
     }
 
     public function seo()

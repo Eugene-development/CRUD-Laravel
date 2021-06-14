@@ -15,6 +15,5 @@ trait Menu
     {
         $this->model = 'App\Models\Menu';
         $this->token = $request->bearerToken();
-
     }
 }

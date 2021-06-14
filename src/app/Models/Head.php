@@ -8,22 +8,27 @@ class Head extends Model
 {
     protected $guarded = [];
 
-    protected $table = 'nvg_head';
+    protected $table = 'head';
 
     public function rubric()
     {
         return $this->hasMany(Rubric::class);
     }
 
-    public function text()
-    {
-        return$this->hasMany(Text::class);
-    }
-
-
     public function menu()
     {
         return $this->belongsTo(Menu::class);
     }
+
+    public function text()
+    {
+        return $this->morphOne(Text::class, 'tagable');
+    }
+
+    public function seo()
+    {
+        return $this->morphOne(Seo::class, 'tagable');
+    }
+
 
 }

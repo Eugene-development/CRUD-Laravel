@@ -8,6 +8,8 @@ abstract class GetAllHmHm
 {
     public function getAllHmHm()
     {
-        return $this->model::with($this->withEntity . $this->subEntity)->get();
+        return $this->model::where('project_id', $this->token)
+            ->with($this->withEntity . $this->subEntity)
+            ->get();
     }
 }

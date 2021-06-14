@@ -8,12 +8,11 @@ abstract class GetWhHmCount
 {
     public function getWhHmCount($param)
     {
-        return $this->model::where('id', $param)
-            ->with(
-                [$this->withEntity => function($query) {
-                    $query->withCount($this->countEntity);
-                }]
-            )
+        return $this->model::where('project_id', $this->token)
+            ->where('id', $param)
+            ->with([$this->withEntity => function($query) {
+                $query->withCount($this->countEntity);
+            }])
             ->get();
     }
 }

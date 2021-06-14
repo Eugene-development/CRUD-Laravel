@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers\Catalog;
 
-use App\Http\Contracts\Catalog; //Не удалять!!!!!!!!!!
+use App\Http\Contracts\Production\Catalog; //Не удалять!!!!!!!!!!
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -41,7 +41,7 @@ class ProductController extends Controller
 //    public function productOne(Request $request)
 //    {
 //        $container = app();
-//        $product = $container->make(Catalog::class)
+//        $product = $container->make(Production::class)
 //            ->getProductOne($request->id);
 //        return new Resource($product);
 //    }
@@ -54,7 +54,7 @@ class ProductController extends Controller
 //    public function getAll()
 //    {
 //        $container = app();
-//        $productsAll = $container->make(Catalog::class)
+//        $productsAll = $container->make(Production::class)
 //            ->getProductsAll();
 //        return new Resource($productsAll);
 //    }
@@ -67,7 +67,7 @@ class ProductController extends Controller
 //    public function productsCategory(Request $request)
 //    {
 //        $container = app();
-//        $productsCategory = $container->make(Catalog::class)
+//        $productsCategory = $container->make(Production::class)
 //            ->getProductsCategory($request->category);
 //        return new Resource($productsCategory);
 //    }
@@ -80,7 +80,7 @@ class ProductController extends Controller
 //    public function ProductsSearch(Request $request)
 //    {
 //        $container = app();
-//        $productsSearch = $container->make(Catalog::class)
+//        $productsSearch = $container->make(Production::class)
 //            ->getProductsSearch($request->search);
 //        return new Resource($productsSearch);
 //    }
@@ -93,7 +93,7 @@ class ProductController extends Controller
 //    public function productsNew()
 //    {
 //        $container = app();
-//        $productsNew = $container->make(Catalog::class)
+//        $productsNew = $container->make(Production::class)
 //            ->getProductsNew();
 //        return new Resource($productsNew);
 //    }
@@ -106,7 +106,7 @@ class ProductController extends Controller
 //    public function productsSale()
 //    {
 //        $container = app();
-//        $productsSale = $container->make(Catalog::class)
+//        $productsSale = $container->make(Production::class)
 //            ->getProductsSale();
 //        return new Resource($productsSale);
 //    }
@@ -119,7 +119,7 @@ class ProductController extends Controller
 //    public function productsAction()
 //    {
 //        $container = app();
-//        $productsAction = $container->make(Catalog::class)
+//        $productsAction = $container->make(Production::class)
 //            ->getProductsAction();
 //        return new Resource($productsAction);
 //    }
@@ -132,7 +132,7 @@ class ProductController extends Controller
 //    public function productsBestseller()
 //    {
 //        $container = app();
-//        $productsBestseller = $container->make(Catalog::class)
+//        $productsBestseller = $container->make(Production::class)
 //            ->getProductsBestseller();
 //        return new Resource($productsBestseller);
 //    }
@@ -145,7 +145,7 @@ class ProductController extends Controller
 //    public function productsSimilar()
 //    {
 //        $container = app();
-//        $productsSimilar = $container->make(Catalog::class)
+//        $productsSimilar = $container->make(Production::class)
 //            ->getProductsSimilar();
 //        return new Resource($productsSimilar);
 //    }

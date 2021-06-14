@@ -10,11 +10,17 @@ class Action extends Model
 {
     protected $guarded = [];
 
-    protected $table = 'nvg_action';
+    protected $table = 'action';
 
     public function product()
     {
         return $this->hasMany(Product::class);
     }
+
+    public function text()
+    {
+        return $this->morphOne(Text::class, 'tagable');
+    }
+
 
 }
