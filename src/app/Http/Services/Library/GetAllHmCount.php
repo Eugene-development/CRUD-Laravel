@@ -10,7 +10,8 @@ abstract class GetAllHmCount
     {
         return $this->model::where('project_id', $this->token)
             ->with([$this->withEntity => function($query) {
-                $query->withCount($this->countEntity);
+                $query->where('project_id', $this->token)
+                      ->withCount($this->countEntity);
             }])
             ->get();
     }

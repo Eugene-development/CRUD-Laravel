@@ -10,7 +10,9 @@ abstract class GetWhHm
     {
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
-            ->with($this->withEntity)
+            ->with([$this->withEntity => function($query) {
+                $query->where('project_id', $this->token);
+            }])
             ->get();
     }
 }

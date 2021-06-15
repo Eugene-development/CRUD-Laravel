@@ -11,7 +11,8 @@ abstract class GetWhHmCount
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
             ->with([$this->withEntity => function($query) {
-                $query->withCount($this->countEntity);
+                $query->where('project_id', $this->token)
+                    ->withCount($this->countEntity);
             }])
             ->get();
     }

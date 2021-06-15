@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "7701:80"
+      - "7751:80"
     volumes:
       - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
