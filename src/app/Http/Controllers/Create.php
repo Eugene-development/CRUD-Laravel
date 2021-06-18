@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 trait Create
 {
-    //SuperMethod
     public function add()
     {
         $container = app();

@@ -14,6 +14,6 @@ trait Product
     function __construct(Request $request)
     {
         $this->model = 'App\Models\Product';
-        $this->token = $request->bearerToken();
+        $this->token = $request->bearerToken();//TODO А надо ли? в data токен вшиваю ведь
     }
 }

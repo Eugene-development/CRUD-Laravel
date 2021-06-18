@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers\Catalog;
 
-use App\Http\Contracts\Production\Catalog; //Не удалять!!!!!!!!!!
+use App\Http\Contracts\Production\Catalog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -22,15 +22,19 @@ class ProductController extends Controller
 
         $this->param = $request->id;
 
+
         $this->data = [
+            'project_id' => $request->bearerToken(),
+//            'category_id' => $request->category_id,
             'name' => $request->name,
             'slug' => Str::slug($request->name),
             'price' => $request->price,
-            'category_id' => $request->category_id,
             'unit' => $request->unit,
             'description' => $request->description
         ];
+//        dd($this->param, $this->data);
     }
+
 
 
     //    /**
