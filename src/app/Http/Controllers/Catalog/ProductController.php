@@ -25,7 +25,7 @@ class ProductController extends Controller
 
         $this->data = [
             'project_id' => $request->bearerToken(),
-//            'category_id' => $request->category_id,
+            'category_id' => $request->category_id,
             'name' => $request->name,
             'slug' => Str::slug($request->name),
             'price' => $request->price,
