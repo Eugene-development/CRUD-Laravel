@@ -21,7 +21,7 @@ class MenuController extends Controller
 //        $token = $request->bearerToken();
 //                dd('123');
         $this->entity = Menu::class;
-
+//TODO Почему только в меню?
         $this->param = $request->id;
 
         $this->data = [
