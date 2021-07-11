@@ -10,6 +10,6 @@ class GetWhHmHmpmHmpmCo
     {
 
 
-        return $this->model::where('project_id', $this->token)->get();
+        return $this->model::where('project_id', $this->token)->where('id', $param)->get();
     }
 }
