@@ -65,6 +65,13 @@ abstract class Repository
         return $this->serviceWhHmHmCount->getWhHmHmCount($param);
     }
 
+    public function getCategoryHmHmpmHmpmCo($param)
+    {
+        return $this->serviceCategoryHmHmpmHmpmCo->getCategoryHmHmpmHmpmCo($param);
+    }
+
+
+
 
 //    Change
     public function create($data)

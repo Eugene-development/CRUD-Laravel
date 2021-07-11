@@ -95,6 +95,14 @@ trait Read
     }
 
 
+    public function getCategoryHmHmpmHmpmCo($param)
+    {
+        $container = app();
+        $response = $container->make($this->entity)->getCategoryHmHmpmHmpmCo($param);
+        return new Resource($response);
+    }
+
+
 
 
 

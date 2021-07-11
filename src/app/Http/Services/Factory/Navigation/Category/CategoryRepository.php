@@ -14,6 +14,9 @@ final class CategoryRepository extends Repository implements Category
     protected $serviceAll;
     protected $serviceAllHm;
     protected $serviceWhHm;
+    protected $serviceWhHmHmCount;
+    protected $serviceCategoryHmHmpmHmpmCo;
+
 
     protected $serviceCreate;
     protected $serviceUpdate;
@@ -24,6 +27,9 @@ final class CategoryRepository extends Repository implements Category
         $this->serviceAll = app('App\Http\Services\\' . $this->path . '\ServiceAll');
         $this->serviceAllHm = app('App\Http\Services\\' . $this->path . '\ServiceAllHm');
         $this->serviceWhHm = app('App\Http\Services\\' . $this->path . '\ServiceWhHm');
+        $this->serviceWhHmHmCount = app('App\Http\Services\\' . $this->path . '\ServiceWhHmHmCount');
+        $this->serviceCategoryHmHmpmHmpmCo = app('App\Http\Services\\' . $this->path . '\ServiceCategoryHmHmpmHmpmCo');
+
 
         $this->serviceCreate = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
         $this->serviceUpdate = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
