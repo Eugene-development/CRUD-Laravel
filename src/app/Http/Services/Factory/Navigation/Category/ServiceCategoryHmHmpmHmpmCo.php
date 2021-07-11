@@ -12,7 +12,7 @@ class ServiceCategoryHmHmpmHmpmCo extends GetWhHmHmpmHmpmCo
     use Category;
 
     protected $firstEntity = 'product';
-//    protected $secondEntity = 'category';
+    protected $secondEntity = 'image';
     protected $thirdEntity = 'text';
 
 }
