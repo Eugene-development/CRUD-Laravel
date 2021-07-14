@@ -20,12 +20,8 @@ class GetWhHmHmpmHmpmCo
                 $this->firstEntity . "." . $this->secondEntity => function($query) {
                     $query->where('project_id', $this->token);
                 },//изображение продукта (полиморф)
-                $this->firstEntity => function($query) {
-                    $query->where('project_id', $this->token)
-                        ->withCount($this->secondEntity);
-                },// количество продуктов в категории
             ])
-            ->withCount($this->firstEntity)
+            ->withCount($this->firstEntity)// количество продуктов в категории
             ->get();
     }
 }

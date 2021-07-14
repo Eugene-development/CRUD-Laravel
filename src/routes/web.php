@@ -9,7 +9,7 @@ use App\Http\Controllers\Text\TextController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/get-WhCategory-HmProduct-HmImageProduct-HmTextProduct-CoPruduct/{param}', [CategoryController::class, 'getCategoryHmHmpmHmpmCo']);
+Route::get('/get-WhCategory-HmProduct-HmImageProduct-HmTextProduct-CoProduct/{param}', [CategoryController::class, 'getCategoryHmHmpmHmpmCo']);
 //Route::get('/get-WhCategory-HmProduct-HmImageProduct-HmTextProduct-CoPruduct/{param}', [CategoryController::class, 'getWhHmHmCount']);
 
 
