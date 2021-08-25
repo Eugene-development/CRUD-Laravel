@@ -14,5 +14,5 @@ class ServiceCategoryHmHmpmHmpmCo extends GetWhHmHmpmHmpmCo
     protected $firstEntity = 'product';
     protected $secondEntity = 'image';
     protected $thirdEntity = 'text';
-
+    protected $fourtEntity = 'seo';
 }

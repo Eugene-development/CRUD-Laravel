@@ -36,6 +36,9 @@ abstract class GetWhHmHmCount
         return $this->model::where('project_id', $this->token)//Определяем рубрику проекта
             ->where('id', $param)
             ->with([
+                $this->thirdEntity => function($query) {
+                    $query->where('project_id', $this->token);
+                },
                 $this->firstEntity . "." . $this->secondEntity => function($query) {
                     $query->where('project_id', $this->token);
                 },//все продукты проекта

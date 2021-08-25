@@ -11,7 +11,7 @@ class GetWhHmHmpmHmpmCo
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
             ->with([
-                $this->firstEntity  => function($query) {
+                $this->firstEntity => function($query) {
                     $query->where('project_id', $this->token);
                 },//все продукты проекта
                 $this->firstEntity . "." . $this->thirdEntity => function($query) {
@@ -20,6 +20,9 @@ class GetWhHmHmpmHmpmCo
                 $this->firstEntity . "." . $this->secondEntity => function($query) {
                     $query->where('project_id', $this->token);
                 },//изображение продукта (полиморф)
+                $this->fourtEntity => function($query) {
+                    $query->where('project_id', $this->token);
+                } // seo
             ])
             ->withCount($this->firstEntity)// количество продуктов в категории
             ->get();
