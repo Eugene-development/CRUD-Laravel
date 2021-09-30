@@ -13,6 +13,8 @@ final class HeadRepository extends Repository implements Head
 
     protected $serviceAll;
     protected $serviceAllHm;
+    protected $serviceAllHmHm;
+
 
     protected $serviceCreate;
     protected $serviceUpdate;
@@ -22,6 +24,7 @@ final class HeadRepository extends Repository implements Head
     {
         $this->serviceAll = app('App\Http\Services\\' . $this->path . '\ServiceAll');
         $this->serviceAllHm = app('App\Http\Services\\' . $this->path . '\ServiceAllHm');
+        $this->serviceAllHmHm = app('App\Http\Services\\' . $this->path . '\ServiceAllHmHm');
         $this->serviceCreate = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
         $this->serviceUpdate = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
         $this->serviceDelete = app('App\Http\Services\\' . $this->path . '\ServiceDelete');

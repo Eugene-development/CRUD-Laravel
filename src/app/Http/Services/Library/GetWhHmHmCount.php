@@ -38,13 +38,13 @@ abstract class GetWhHmHmCount
             ->with([
                 $this->thirdEntity => function($query) {
                     $query->where('project_id', $this->token);
-                },
-                $this->firstEntity . "." . $this->secondEntity => function($query) {
-                    $query->where('project_id', $this->token);
-                },//все продукты проекта
+                },//текст рубрики
                 $this->firstEntity . "." . $this->thirdEntity => function($query) {
                     $query->where('project_id', $this->token);
                 }, //текст категории (полиморф)
+                $this->firstEntity . "." . $this->secondEntity => function($query) {
+                    $query->where('project_id', $this->token);
+                },//все продукты проекта
                 $this->firstEntity . "." . $this->secondEntity  . "." . 'image' => function($query) {
                     $query->where('project_id', $this->token);
                 },//изображение продукта (полиморф)

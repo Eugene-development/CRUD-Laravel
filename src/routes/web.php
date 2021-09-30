@@ -59,7 +59,8 @@ Route::get('/get-all-category', [CategoryController::class, 'getAllHm']);
 Route::get('/get-all-product/', [ProductController::class, 'getAllHm']);
 
 //Получить все заголовки с рубриками
-Route::get('/get-all-head-rubric', [HeadController::class, 'getAllHm']);
+Route::get('/get-all-head-rubric', [HeadController::class, 'getAllHmHm']);
+//Route::get('/get-all-head-rubric', [HeadController::class, 'getAllHm']);
 
 //Получить все категории с СЕО
 Route::get('/get-all-category-seo', [CategoryController::class, 'getAllHm']);
